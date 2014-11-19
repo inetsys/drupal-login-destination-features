@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Main info hook that features uses to determine what components are provided
+ * by the implementing module.
+ */
+function ld_features_features_api(){
+	return array(
+		'ld_component' => array(
+			'name' => t('Login Destination Settings'),
+			'default_hook' => 'ld_component_defaults',
+			'default_file' => FEATURES_DEFAULTS_INCLUDED,
+			'feature_source' => TRUE,
+			'file' => drupal_get_path('module', 'ld_features') .'/ld_component.features.inc',
+		),
+	);
+}
